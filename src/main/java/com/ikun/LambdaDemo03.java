@@ -17,7 +17,6 @@ public class LambdaDemo03 {
 
     public static <R> R typeConver(Function<String, R> function) {
         String str = "123";
-        R result = function.apply(str);
-        return result;
+        return function.apply(str);
     }
 }
