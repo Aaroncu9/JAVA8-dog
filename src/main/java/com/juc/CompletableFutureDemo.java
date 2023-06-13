@@ -17,7 +17,6 @@ public class CompletableFutureDemo {
 
 }
 
-
 class MyThread implements Callable<String> {
     @Override
     public String call() throws Exception {

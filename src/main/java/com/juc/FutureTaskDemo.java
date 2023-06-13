@@ -13,7 +13,7 @@ import java.util.concurrent.FutureTask;
 public class FutureTaskDemo {
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        FutureTask<String> futureTask = new FutureTask<>(new MyThread());
+        FutureTask<String> futureTask = new FutureTask<>(new MyThread2());
         Thread t1 = new Thread(futureTask, "t1");
         t1.start();
         System.out.println(futureTask.get());
@@ -22,7 +22,7 @@ public class FutureTaskDemo {
 }
 
 
-class MyThread implements Callable<String> {
+class MyThread2 implements Callable<String> {
     @Override
     public String call() throws Exception {
         System.out.println("-------------come in call()  ");
