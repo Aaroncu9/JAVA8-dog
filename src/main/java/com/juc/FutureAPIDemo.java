@@ -3,7 +3,6 @@ package com.juc;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
 
 /**
  * @Author: Aaron
@@ -11,7 +10,7 @@ import java.util.concurrent.TimeoutException;
  */
 public class FutureAPIDemo {
 
-    public static void main(String[] args) throws ExecutionException, InterruptedException, TimeoutException {
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
 
         FutureTask<String> futureTask1 = new FutureTask<String>(() -> {
             System.out.println(Thread.currentThread().getName()+ "\t ----come in");

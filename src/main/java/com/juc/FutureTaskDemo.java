@@ -1,12 +1,16 @@
 package com.juc;
 
-import java.util.concurrent.*;
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
+
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.FutureTask;
 
 /**
  * @Author: Aaron
- * @Date: 2023/6/13 15:01
+ * @Date: 2023/6/13 13:51
  */
-public class CompletableFutureDemo {
+public class FutureTaskDemo {
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         FutureTask<String> futureTask = new FutureTask<>(new MyThread());
