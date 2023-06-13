@@ -4,7 +4,7 @@ import java.util.function.IntBinaryOperator;
 import java.util.function.IntPredicate;
 
 /**
- * @Author: A
+ * @Author: Aaron
  * @Date: 2023/6/2 15:14
  */
 public class LambdaDemo02 {

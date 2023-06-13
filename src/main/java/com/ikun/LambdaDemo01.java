@@ -3,7 +3,7 @@ package com.ikun;
 import java.util.function.IntBinaryOperator;
 
 /**
- * @Author: A
+ * @Author: Aaron
  * @Date: 2023/6/2 15:14
  */
 public class LambdaDemo01 {

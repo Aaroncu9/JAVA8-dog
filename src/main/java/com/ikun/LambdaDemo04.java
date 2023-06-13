@@ -4,7 +4,7 @@ import java.util.function.Function;
 import java.util.function.IntConsumer;
 
 /**
- * @Author: A
+ * @Author: Aaron
  * @Date: 2023/6/2 15:14
  */
 public class LambdaDemo04 {
