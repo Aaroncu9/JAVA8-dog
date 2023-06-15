@@ -1,11 +1,12 @@
-package com.juc;
+package com.juc.completableFuture;
 
 import lombok.Getter;
-import sun.nio.ch.Net;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.concurrent.*;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ThreadLocalRandom;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 /**
@@ -42,6 +43,12 @@ public class CompletableFutureMallDemo {
         ).collect(Collectors.toList());
     }
 
+    /**
+     *  分任务搜索
+     * @param list
+     * @param productName
+     * @return list
+     */
     public static List<String> completableFutureGetPrice(List<NetMall> list, String productName) {
         return list.stream().map(netMall ->
             CompletableFuture.supplyAsync(() -> {
@@ -54,6 +61,7 @@ public class CompletableFutureMallDemo {
 
     public static void main(String[] args) {
         long startTime = System.currentTimeMillis();
+
         List<String> priceList = getPrice(netMallList, "mysql");
         for (String price : priceList) {
             System.out.println(price);

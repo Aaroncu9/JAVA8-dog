@@ -1,4 +1,4 @@
-package com.juc;
+package com.juc.completableFuture;
 
 import java.util.concurrent.*;
 
@@ -18,12 +18,16 @@ public class CompletableFutureUseDemo {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println("---------1s 后出结果： " + result);
-            if (result > 5) {
-                int i = 10/0;
-            }
-            return result;
-        }, threadPool).whenComplete((v, e) -> {
+            System.out.println("111");
+            return 1;
+        }, threadPool).handle((v, e) -> {
+            int i = 10/0;
+            System.out.println("222");
+            return v +2;
+        }).handle((v, e) -> {
+            System.out.println("333");
+            return v +3;
+        }).whenComplete((v, e) -> {
             if (e == null) {
                 System.out.println("--------- 计算完成，更新系统： " + v);
             }
