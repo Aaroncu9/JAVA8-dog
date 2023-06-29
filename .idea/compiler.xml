@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="java8" />
         <module name="LamdaDemo" />
+        <module name="JAVA8-dog" />
       </profile>
     </annotationProcessing>
   </component>
